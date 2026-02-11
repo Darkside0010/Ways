@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL WAYS 2026 - Spoilers Completos de Provas Futuras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-principal: #1a365d;
+            --azul-secundario: #2d3748;
+            --azul-claro: #3182ce;
+            --azul-muito-claro: #ebf8ff;
+            --castanho-principal: #744210;
+            --castanho-claro: #b7791f;
+            --castanho-suave: #faf3e6;
+            --verde-spoiler: #38a169;
+            --vermelho-alerta: #e53e3e;
+            --amarelo-destaque: #d69e2e;
+            --roxo-admin: #805ad5;
+            --branco: #ffffff;
+            --cinza-claro: #f7fafc;
+            --cinza-medio: #e2e8f0;
+            --cinza-escuro: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(to right, var(--azul-principal), var(--azul-secundario));
+            color: var(--branco);
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--castanho-claro), #ecc94b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo i {
+            color: var(--castanho-claro);
+            font-size: 2.2rem;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--castanho-suave);
+            font-weight: 500;
+            margin-top: -5px;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .active {
+            background-color: var(--castanho-claro);
+        }
+
+        /* Banner principal */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.92), rgba(45, 55, 72, 0.92)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--branco);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.8;
+        }
+
+        .alert-box {
+            background-color: rgba(183, 121, 31, 0.2);
+            border-left: 5px solid var(--castanho-claro);
+            padding: 1.2rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .alert-box h3 {
+            color: var(--castanho-suave);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--castanho-claro);
+            color: var(--branco);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--castanho-claro);
+            margin-top: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--castanho-claro);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* BOTÃO ESPECIAL DE ACESSO AOS WAYS */
+        .access-container {
+            background: linear-gradient(135deg, var(--roxo-admin), #553c9a);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 3rem auto;
+            text-align: center;
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 3px solid var(--amarelo-destaque);
+        }
+
+        .access-container h3 {
+            color: var(--branco);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .access-container p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .access-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ecc94b, var(--amarelo-destaque));
+            color: var(--azul-principal);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .access-button:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            color: var(--azul-principal);
+        }
+
+        .access-button i {
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .access-note {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        /* Seções */
+        section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--azul-principal);
+            position: relative;
+            font-size: 2.2rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(to right, var(--azul-claro), var(--castanho-claro));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--cinza-escuro);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Cards de informações WAYS */
+        .ways-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .ways-card {
+            background-color: var(--branco);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s ease;
+            border-top: 5px solid var(--castanho-claro);
+        }
+
+        .ways-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--azul-secundario), var(--azul-principal));
+            color: var(--branco);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--castanho-suave);
+        }
+
+        .card-body {
+            padding: 1.8rem;
+        }
+
+        .card-body h4 {
+            color: var(--azul-principal);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--cinza-medio);
+            padding-bottom: 0.5rem;
+        }
+
+        .ways-details {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .ways-details li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .ways-details li:before {
+            content: '•';
+            color: var(--castanho-claro);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .spoiler-alert {
+            background-color: var(--verde-spoiler);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .card-date {
+            display: inline-block;
+            background-color: var(--castanho-suave);
+            color: var(--castanho-principal);
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 0.8rem;
+            font-size: 1rem;
+            border: 2px solid var(--castanho-claro);
+        }
+
+        /* Calendário WAYS Completo */
+        .calendar-ways-container {
+            background-color: var(--branco);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            color: var(--azul-principal);
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--cinza-medio);
+        }
+
+        .calendar-nav button {
+            background-color: var(--azul-claro);
+            color: var(--branco);
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 0.3rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .calendar-nav button:hover {
+            background-color: var(--azul-principal);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .calendar-day {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+            padding: 1rem;
+            text-align: center;
+            font-weight: 700;
+            border-radius: 6px;
+        }
+
+        .calendar-date {
+            padding: 1rem 0.5rem;
+            text-align: center;
+            border: 1px solid var(--cinza-medio);
+            min-height: 100px;
+            position: relative;
+            border-radius: 6px;
+            background-color: var(--branco);
+            transition: all 0.3s ease;
+        }
+
+        .calendar-date:hover {
+            background-color: var(--azul-muito-claro);
+        }
+
+        .calendar-date.has-event {
+            background-color: var(--castanho-suave);
+            border: 2px solid var(--castanho-claro);
+        }
+
+        .event-tag {
+            background-color: var(--verde-spoiler);
+            color: var(--branco);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-weight: 600;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .date-number {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-weight: 700;
+            color: var(--cinza-escuro);
+        }
+
+        /* Área administrativa */
+        .admin-panel {
+            background: linear-gradient(to right, var(--castanho-suave), #f5e9d3);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border-left: 6px solid var(--castanho-claro);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .admin-panel h3 {
+            color: var(--castanho-principal);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+        }
+
+        .admin-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+
+        .admin-btn {
+            background: linear-gradient(to right, var(--azul-secundario), var(--azul-principal));
+            color: var(--branco);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .admin-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Rodapé */
+        footer {
+            background: linear-gradient(to right, var(--azul-principal), #0f1a2d);
+            color: var(--branco);
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--castanho-suave);
+            position: relative;
+            padding-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: var(--castanho-claro);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-section ul li i {
+            color: var(--castanho-claro);
+            margin-top: 3px;
+        }
+
+        .footer-section ul li a {
+            color: var(--branco);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--castanho-claro);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--branco);
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--castanho-claro);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0.3rem 0.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .calendar-grid {
+                grid-template-columns: repeat(7, 1fr);
+                font-size: 0.85rem;
+            }
+
+            .calendar-date {
+                min-height: 85px;
+                padding: 0.8rem 0.3rem;
+            }
+
+            .admin-controls {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ways-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .calendar-grid {
+                grid-template-columns: repeat(7, 1fr);
+                font-size: 0.75rem;
+            }
+            
+            .calendar-date {
+                min-height: 70px;
+                padding: 0.6rem 0.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .access-container {
+                padding: 1.5rem;
+            }
+            
+            .access-container h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Estilos para informações extras */
+        .info-box {
+            background-color: var(--azul-muito-claro);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 5px solid var(--azul-claro);
+        }
+
+        .info-box h4 {
+            color: var(--azul-principal);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box {
+            background-color: #fff5f5;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--vermelho-alerta);
+        }
+
+        .warning-box h4 {
+            color: var(--vermelho-alerta);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight {
+            background-color: rgba(214, 158, 46, 0.15);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--castanho-principal);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <h1>PORTAL WAYS 2026</h1>
+                    <span>SPOILERS COMPLETOS DE PROVAS FUTURAS</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">INÍCIO</a></li>
+                    <li><a href="#ways">WAYS 2026</a></li>
+                    <li><a href="#calendario">CALENDÁRIO</a></li>
+                    <li><a href="#acesso">ACESSO WAYS</a></li>
+                    <li><a href="#admin">ADMIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner principal -->
+    <section class="hero">
+        <div class="container">
+            <h2>PORTAL COMPLETO WAYS 2026</h2>
+            <p>Informações DETALHADAS sobre TODAS as provas futuras, testes, exames e avaliações do ano letivo 2025/2026. Spoilers completos, conteúdos previstos, modelos de questões e muito mais para você se preparar com ANTECEDÊNCIA!</p>
+            
+            <div class="alert-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> INFORMAÇÃO EXCLUSIVA</h3>
+                <p>Este portal contém informações ANTECIPADAS sobre as provas WAYS 2026 baseadas em análises de anos anteriores, padrões de exames e fontes internas. ATUALIZAÇÕES DIÁRIAS com novos spoilers!</p>
+            </div>
+            
+            <a href="#acesso" class="cta-button">OBTER ACESSO COMPLETO AOS WAYS</a>
+        </div>
+    </section>
+
+    <!-- Seção de ACESSO AOS WAYS -->
+    <section id="acesso">
+        <div class="container">
+            <h2 class="section-title">ACESSO COMPLETO AOS WAYS 2026</h2>
+            <p class="section-subtitle">Clique no botão abaixo para obter acesso TOTAL aos spoilers completos, informações exclusivas e conteúdo 100% real das provas WAYS 2026.</p>
+            
+            <div class="access-container">
+                <h3><i class="fas fa-unlock-alt"></i> ACESSO TOTAL AOS WAYS 2026</h3>
+                <p>Esta área contém as informações MAIS COMPLETAS e EXCLUSIVAS sobre todas as provas WAYS 2026. Obtenha acesso imediato aos spoilers reais, questões confirmadas e conteúdos que realmente vão cair nas avaliações.</p>
+                
+                <a href="peg.html" class="access-button">
+                    <i class="fas fa-arrow-right"></i> CLIQUE AQUI PARA OBTER ACESSO AOS WAYS
+                </a>
+                
+                <p class="access-note">Acesso restrito a membros verificados. Sistema de monitoramento ativo para garantir a segurança das informações.</p>
+            </div>
+            
+            <div class="info-box">
+                <h4><i class="fas fa-shield-alt"></i> O QUE VOCÊ TERÁ ACESSO:</h4>
+                <ul class="ways-details">
+                    <li><strong>Spoilers 100% confirmados</strong> de todas as disciplinas</li>
+                    <li><strong>Questões exatas</strong> que vão cair nas provas</li>
+                    <li><strong>Conteúdos específicos</strong> por professor</li>
+                    <li><strong>Gabaritos antecipados</strong> das avaliações</li>
+                    <li><strong>Informações internas</strong> do departamento acadêmico</li>
+                    <li><strong>Sistema de monitoramento</strong> em tempo real</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de WAYS 2026 -->
+    <section id="ways">
+        <div class="container">
+            <h2 class="section-title">WAYS 2026 - INFORMAÇÕES COMPLETAS</h2>
+            <p class="section-subtitle">Detalhes EXCLUSIVOS sobre todas as provas, testes e exames programados para 2026. Informações obtidas através de análise de padrões, vazamentos controlados e previsões baseadas em anos anteriores.</p>
+            
+            <div class="ways-container">
+                <!-- WAYS 1 -->
+                <div class="ways-card">
+                    <div class="card-header">
+                        <h3>WAYS MARÇO 2026</h3>
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="card-body">
+                        <span class="spoiler-alert">SPOILER CONFIRMADO</span>
+                        <h4>Primeira Avaliação Global do Ano</h4>
+                        
+                        <ul class="ways-details">
+                            <li><strong>Data Confirmada:</strong> 14-18 de Março 2026</li>
+                            <li><strong>Matérias:</strong> Português, Matemática, Física, Química, Biologia, História, Inglês</li>
+                            <li><strong>Formato:</strong> Prova escrita com 60 questões objetivas + 2 dissertativas</li>
+                            <li><strong>Duração:</strong> 3 horas para a parte objetiva + 1h30 para dissertativas</li>
+                            <li><strong>Peso na Média:</strong> 30% da nota do 2º período</li>
+                            <li><strong>Conteúdo Específico:</strong> Foco em matéria do 1º período + revisão de anos anteriores</li>
+                            <li><strong>Dica Exclusiva:</strong> Questão 32 de Matemática será sobre logaritmos aplicados</li>
+                        </ul>
+                        
+                        <div class="card-date">14-18 MARÇO 2026</div>
+                    </div>
+                </div>
+                
+                <!-- WAYS 2 -->
+                <div class="ways-card">
+                    <div class="card-header">
+                        <h3>WAYS JUNHO 2026</h3>
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="card-body">
+                        <span class="spoiler-alert">SPOILER PARCIAL</span>
+                        <h4>Avaliação de Final de Ano Letivo</h4>
+                        
+                        <ul class="ways-details">
+                            <li><strong>Período Estimado:</strong> 6-10 de Junho 2026</li>
+                            <li><strong>Matérias Incluídas:</strong> TODAS as disciplinas do currículo</li>
+                            <li><strong>Novidade 2026:</strong> Prova interdisciplinar Matemática+Física</li>
+                            <li><strong>Formato:</strong> 80 questões + 3 questões dissertativas</li>
+                            <li><strong>Peso na Média:</strong> 40% da nota final anual</li>
+                            <li><strong>Conteúdo:</strong> Matéria completa do ano letivo 2025/2026</li>
+                            <li><strong>Dica Exclusiva:</strong> Questão de Química sobre termoquímica será valorizada</li>
+                        </ul>
+                        
+                        <div class="card-date">6-10 JUNHO 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Área Administrativa -->
+    <section id="admin">
+        <div class="container">
+            <h2 class="section-title">ÁREA ADMINISTRATIVA - CONTROLE TOTAL</h2>
+            <p class="section-subtitle">Painel completo para editar TODO o conteúdo do portal: datas, spoilers, informações, calendários e muito mais. Atualizações em tempo real.</p>
+            
+            <div class="admin-panel">
+                <h3><i class="fas fa-cogs"></i> CONTROLE DO CONTEÚDO WAYS 2026</h3>
+                <div class="admin-controls">
+                    <button class="admin-btn" id="edit-ways">
+                        <i class="fas fa-edit"></i> EDITAR INFORMAÇÕES WAYS
+                    </button>
+                    <button class="admin-btn" id="edit-calendar">
+                        <i class="fas fa-calendar-alt"></i> EDITAR CALENDÁRIO COMPLETO
+                    </button>
+                    <button class="admin-btn" id="view-users">
+                        <i class="fas fa-users"></i> VER USUÁRIOS ONLINE
+                    </button>
+                    <button class="admin-btn" onclick="location.href='portal-admin.html'">
+                        <i class="fas fa-tachometer-alt"></i> PAINEL DE MONITORAMENTO
+                    </button>
+                </div>
+                
+                <div class="info-box" style="margin-top: 2rem;">
+                    <h4><i class="fas fa-database"></i> ESTATÍSTICAS DO PORTAL</h4>
+                    <ul class="ways-details">
+                        <li><strong>Usuários online agora:</strong> <span id="online-users">12</span></li>
+                        <li><strong>Total de acessos hoje:</strong> 247</li>
+                        <li><strong>Spoilers disponíveis:</strong> 48 itens detalhados</li>
+                        <li><strong>Última atualização:</strong> <span id="current-time">09/02/2026 14:30</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PORTAL WAYS 2026</h3>
+                    <p>Sistema de informação avançado para acompanhamento acadêmico completo. Spoilers detalhados, calendários interativos e informações exclusivas sobre provas futuras.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>SECÇÕES PRINCIPAIS</h3>
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i><a href="#ways">WAYS 2026 - Informações</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#calendario">Calendário Acadêmico</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#acesso">Acesso aos WAYS</a></li>
+                        <li><i class="fas fa-chevron-right"></i><a href="#admin">Área Administrativa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>CONTATOS E SUPORTE</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> ways2026@portalacademico.edu</li>
+                        <li><i class="fas fa-phone"></i> (351) 912 345 678 (Suporte)</li>
+                        <li><i class="fas fa-shield-alt"></i> Sistema seguro - Nível 3 de proteção</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 PORTAL WAYS - Sistema de Informação Acadêmica. Todos os direitos reservados. | Informações confidenciais - uso interno exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulação de dados
+        document.addEventListener('DOMContentLoaded', function() {
+            // Atualizar contador de usuários online (simulação)
+            setInterval(() => {
+                const onlineUsers = Math.floor(Math.random() * 10) + 8;
+                document.getElementById('online-users').textContent = onlineUsers;
+            }, 5000);
+            
+            // Atualizar hora atual
+            function updateDateTime() {
+                const now = new Date();
+                const options = { 
+                    day: '2-digit', 
+                    month: '2-digit', 
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                };
+                const formattedDate = now.toLocaleDateString('pt-PT', options);
+                document.getElementById('current-time').textContent = formattedDate;
+            }
+            
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+            
+            // Adicionar funcionalidade aos botões administrativos
+            document.getElementById('edit-ways').addEventListener('click', function() {
+                alert('Editor de informações WAYS será aberto em nova janela.');
+            });
+            
+            document.getElementById('edit-calendar').addEventListener('click', function() {
+                alert('Editor de calendário será aberto em nova janela.');
+            });
+            
+            document.getElementById('view-users').addEventListener('click', function() {
+                alert('Redirecionando para painel de monitoramento de usuários...');
+                location.href = 'portal-admin.html';
+            });
+            
+            // Adicionar efeito de rolagem suave para links internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

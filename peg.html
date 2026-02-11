@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📁 WAYS 2026 - Downloads Exclusivos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* FASE 1 - SITE DE CONVENCIMENTO (limpo, profissional) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            transition: all 0.5s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header profissional */
+        .site-header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            color: #764ba2;
+            font-size: 32px;
+        }
+
+        .logo-text h1 {
+            color: #333;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .user-count {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .download-title {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .download-subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cartões de downloads */
+        .download-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .card.highlight {
+            border: 2px solid #4CAF50;
+            background: linear-gradient(135deg, #f8fff8 0%, #e8f5e9 100%);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card-icon {
+            color: #764ba2;
+            font-size: 24px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card-content {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .file-info {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .file-info div {
+            margin: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Botões principais */
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 18px 50px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-width: 250px;
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-yes:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-no {
+            background: linear-gradient(135deg, #f44336 0%, #c62828 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+        }
+
+        .btn-no:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(244, 67, 54, 0.4);
+        }
+
+        /* Testemunhos fake - SEM NOMES */
+        .testimonials {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        /* FASE 2 - TERROR ABSOLUTO (aparece depois) */
+        .terror-mode {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            color: #fff;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .terror-header {
+            background: rgba(220, 53, 69, 0.2);
+            padding: 20px;
+            border-bottom: 3px solid #dc3545;
+            margin-bottom: 30px;
+            animation: terror-pulse 2s infinite;
+        }
+
+        @keyframes terror-pulse {
+            0%, 100% { background: rgba(220, 53, 69, 0.2); }
+            50% { background: rgba(220, 53, 69, 0.4); }
+        }
+
+        .terror-title {
+            color: #dc3545;
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .terror-subtitle {
+            color: #ff6b6b;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Informações coletadas */
+        .data-collected {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #dc3545;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .data-item {
+            background: rgba(220, 53, 69, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .data-label {
+            color: #ff9999;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .data-value {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Mensagens de terror */
+        .terror-messages {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid #dc3545;
+        }
+
+        .message {
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            animation: message-appear 0.5s ease;
+        }
+
+        @keyframes message-appear {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .message-title {
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .message-content {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Webcam fake */
+        .webcam-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: 150px;
+            background: #000;
+            border: 2px solid #dc3545;
+            border-radius: 8px;
+            z-index: 10000;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(220, 53, 69, 0.5);
+        }
+
+        .webcam-light {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 10px;
+            height: 10px;
+            background: #dc3545;
+            border-radius: 50%;
+            animation: light-pulse 1.5s infinite;
+        }
+
+        @keyframes light-pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+            70% { opacity: 0.7; box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+        }
+
+        .webcam-text {
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+            color: #dc3545;
+            font-size: 10px;
+        }
+
+        /* Botão de escape */
+        .escape-btn {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .escape-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                min-width: 200px;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .download-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- FASE 1: SITE DE CONVENCIMENTO -->
+    <div class="container" id="phase1">
+        <header class="site-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>WAYS ACADÊMICO 2026</h1>
+                    <span>Acesso Exclusivo a Materiais</span>
+                </div>
+            </div>
+            <div class="user-count">
+                <i class="fas fa-users"></i> <span id="online-count">247</span> online agora
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="download-section">
+                <h1 class="download-title">📥 DOWNLOAD COMPLETO - PROVAS 2026</h1>
+                <p class="download-subtitle">
+                    Acesso imediato a TODAS as provas, gabaritos e materiais exclusivos do ano letivo 2026. 
+                    Sistema atualizado diariamente com novos conteúdos.
+                </p>
+
+                <div class="download-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3 class="card-title">PACOTE COMPLETO</h3>
+                        </div>
+                        <div class="card-content">
+                            • Todas as disciplinas (Matemática, Português, FQ, etc.)<br>
+                            • Gabaritos oficiais<br>
+                            • Resoluções detalhadas<br>
+                            • Material bónus exclusivo
+                        </div>
+                        <div class="file-info">
+                            <div><i class="fas fa-hdd"></i> Tamanho: 2.4 GB</div>
+                            <div><i class="fas fa-download"></i> Downloads hoje: 124</div>
+                            <div><i class="fas fa-shield-alt"></i> Protegido: SSL 256-bit</div>
+                        </div>
+                    </div>
+
+                    <div class="card highlight">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3 class="card-title">ACESSO V.I.P.</h3>
+                        </div>
+                        <div class="card-content">
+                            • Provas ANTECIPADAS (2026)<br>
+                            • Conteúdos NUNCA vistos<br>
+                            • Acesso a grupo privado<br>
+                            • Suporte 24/7<br>
+                            • Atualizações vitalícias
+                        </div>
+                        <div class="file-info">
+                            <div><i class="fas fa-star"></i> Exclusivo: 50 vagas restantes</div>
+                            <div><i class="fas fa-bolt"></i> Download: Velocidade máxima</div>
+                            <div><i class="fas fa-user-secret"></i> Anonimato garantido</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="card-title">APP MÓVEL</h3>
+                        </div>
+                        <div class="card-content">
+                            • Acesso em qualquer dispositivo<br>
+                            • Notificações de novos conteúdos<br>
+                            • Modo offline disponível<br>
+                            • Sincronização automática<br>
+                            • Interface otimizada
+                        </div>
+                        <div class="file-info">
+                            <div><i class="fas fa-sync"></i> Atualizado: Hoje</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testemunhos fake SEM NOMES -->
+                <div class="testimonials">
+                    <h3 style="text-align: center; margin-bottom: 25px; color: #333;">O QUE DIZEM OS NOSSOS UTILIZADORES:</h3>
+                    <div class="testimonial-grid">
+                        <div class="testimonial">
+                            <div class="testimonial-text">
+                                "Consegui 19 valores em Matemática graças a este material! Valeu cada segundo!"
+                            </div>
+                            <div class="testimonial-author">- Aluno do 12º Ano</div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-text">
+                                "A parte de Física-Química salvou-me no exame nacional. Conteúdo EXCELENTE!"
+                            </div>
+                            <div class="testimonial-author">- Aluna do 11º Ano</div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-text">
+                                "Desde que comecei a usar, as minhas notas subiram 3 valores. Recomendo!"
+                            </div>
+                            <div class="testimonial-author">- Estudante do 10º Ano</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTÕES PRINCIPAIS -->
+                <div class="button-group">
+                    <button class="btn btn-yes" onclick="startTerror('yes')">
+                        <i class="fas fa-download"></i> SIM! BAIXAR TUDO AGORA
+                    </button>
+                    <button class="btn btn-no" onclick="startTerror('no')">
+                        <i class="fas fa-times"></i> NÃO, OBRIGADO
+                    </button>
+                </div>
+
+                <p style="text-align: center; color: #666; margin-top: 20px; font-size: 14px;">
+                    <i class="fas fa-lock"></i> Conexão segura | <i class="fas fa-user-shield"></i> Anonimato garantido
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- FASE 2: TERROR ABSOLUTO -->
+    <div class="terror-mode" id="phase2">
+        <div class="terror-header">
+            <h1 class="terror-title">🚨 SISTEMA DE PROTEÇÃO ATIVADO</h1>
+            <p class="terror-subtitle">Tentativa de acesso a material restrito detectada e bloqueada</p>
+        </div>
+
+        <div class="container">
+            <!-- Webcam fake -->
+            <div class="webcam-container">
+                <div class="webcam-light"></div>
+                <div class="webcam-text">WEBCAM ATIVA [GRAVAÇÃO]</div>
+            </div>
+
+            <!-- Informações coletadas -->
+            <div class="data-collected">
+                <h2 style="color: #ff6b6b; margin-bottom: 20px;">
+                    <i class="fas fa-database"></i> INFORMAÇÕES COLETADAS AUTOMATICAMENTE
+                </h2>
+                <div class="data-grid" id="collected-data">
+                    <!-- Dados serão inseridos via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Mensagens de terror -->
+            <div class="terror-messages">
+                <div class="message">
+                    <div class="message-title">
+                        <i class="fas fa-exclamation-triangle"></i> ALERTA DE SEGURANÇA
+                    </div>
+                    <div class="message-content">
+                        O seu dispositivo foi identificado tentando aceder a material protegido por direitos autorais.
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="message-title">
+                        <i class="fas fa-user-tie"></i> COMUNICAÇÃO À DIREÇÃO
+                    </div>
+                    <div class="message-content">
+                        Um relatório detalhado com todas as informações coletadas foi enviado automaticamente para:
+                        <br><strong>Diretor da Escola, Diretor de Turma e pela toda direção interna da escola</strong>
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="message-title">
+                        <i class="fas fa-gavel"></i> PROCESSO AUTOMÁTICO
+                    </div>
+                    <div class="message-content">
+                        Foi iniciado automaticamente um processo disciplinar. A audiência está marcada para 
+                        <span id="hearing-date"></span> às <span id="hearing-time"></span>.
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="message-title">
+                        <i class="fas fa-network-wired"></i> CONEXÕES MONITORIZADAS
+                    </div>
+                    <div class="message-content">
+                        Todas as suas atividades online nesta rede estão agora sob monitorização constante.
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="message-title">
+                        <i class="fas fa-video"></i> EVIDÊNCIAS VISUAIS
+                    </div>
+                    <div class="message-content">
+                        Capturas de ecrã e gravações da webcam foram armazenadas como evidência.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consequências específicas -->
+            <div style="background: rgba(220, 53, 69, 0.1); padding: 20px; border-radius: 10px; margin: 25px 0; border: 1px solid #dc3545;">
+                <h3 style="color: #ffcc00; margin-bottom: 15px;">
+                    <i class="fas fa-skull-crossbones"></i> CONSEQUÊNCIAS IMEDIATAS
+                </h3>
+                <div style="color: #ccc; line-height: 1.8;">
+                    ✅ <strong>Acesso à Internet da Escola: BLOQUEADO</strong> (30 dias)<br>
+                    ✅ <strong>Email escolar: SUSPENSO</strong><br>
+                    ✅ <strong>Plataforma de aulas: ACESSO REVOGADO</strong><br>
+                    ✅ <strong>Biblioteca escolar: PROIBIDO</strong><br>
+                    ✅ <strong>Participação em atividades: CANCELADA</strong><br>
+                    ✅ <strong>Notas do período: RETIDAS até resolução</strong>
+                </div>
+            </div>
+
+            <!-- Botão de escape SEM REVELAÇÃO -->
+            <button class="escape-btn" onclick="showDeniedMessage()">
+                <i class="fas fa-life-ring"></i> TENTAR EXPLICAR A SITUAÇÃO
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Detectar informações básicas
+        function detectBasicInfo() {
+            // Pegar IP local (simulado)
+            const ipParts = [];
+            for(let i = 0; i < 4; i++) {
+                ipParts.push(Math.floor(Math.random() * 255));
+            }
+            const localIP = ipParts.join('.');
+            
+            // Resolução da tela
+            const screenRes = `${screen.width} × ${screen.height}`;
+            
+            return {
+                localIP,
+                screenRes,
+                browser: 'Google' // Sempre mostra "Google"
+            };
+        }
+
+        // Iniciar o terror
+        function startTerror(choice) {
+            const phase1 = document.getElementById('phase1');
+            const phase2 = document.getElementById('phase2');
+            const collectedData = document.getElementById('collected-data');
+            
+            // Detectar informações
+            const deviceInfo = detectBasicInfo();
+            
+            // Pegar data e hora atuais
+            const now = new Date();
+            const hearingDate = new Date(now.getTime() + (3 * 24 * 60 * 60 * 1000)); // 3 dias depois
+            
+            // Atualizar datas da audiência
+            document.getElementById('hearing-date').textContent = 
+                hearingDate.toLocaleDateString('pt-PT');
+            document.getElementById('hearing-time').textContent = 
+                '14:30';
+            
+            // Esconder fase 1, mostrar fase 2
+            phase1.style.display = 'none';
+            phase2.style.display = 'block';
+            document.body.style.background = '#000';
+            
+            // Adicionar sons de terror
+            try {
+                const alertSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
+                alertSound.volume = 0.3;
+                alertSound.play();
+            } catch(e) {}
+            
+            // Preparar dados coletados baseados na escolha
+            let dataHTML = '';
+            
+            if (choice === 'yes') {
+                // Se clicou em SIM - Consequências PIORES
+                dataHTML = `
+                    <div class="data-item">
+                        <div class="data-label">Intenção Confirmada</div>
+                        <div class="data-value" style="color: #ff4444;">TENTATIVA DE FRAUDE ATIVA</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Endereço IP</div>
+                        <div class="data-value">${deviceInfo.localIP}</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Navegador</div>
+                        <div class="data-value">${deviceInfo.browser}</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Localização</div>
+                        <div class="data-value">Rede da Escola (Triangulado)</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Resolução do Ecrã</div>
+                        <div class="data-value">${deviceInfo.screenRes}</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Hora do Acesso</div>
+                        <div class="data-value">${now.toLocaleString('pt-PT')}</div>
+                    </div>
+                `;
+                
+                // Adicionar mensagem EXTRA de terror para quem clicou SIM
+                setTimeout(() => {
+                    const terrorMessages = document.querySelector('.terror-messages');
+                    const extraMessage = document.createElement('div');
+                    extraMessage.className = 'message';
+                    extraMessage.innerHTML = `
+                        <div class="message-title" style="color: #ff0000;">
+                            <i class="fas fa-radiation"></i> ADVERTÊNCIA MÁXIMA
+                        </div>
+                        <div class="message-content">
+                            <strong>POR TER CLICADO EM "SIM":</strong> O processo foi elevado para "Tentativa Ativa de Fraude". 
+                            As consequências serão proporcionalmente mais graves. Relatório completo enviado para todos os departamentos.
+                        </div>
+                    `;
+                    terrorMessages.appendChild(extraMessage);
+                }, 2000);
+                
+            } else {
+                // Se clicou em NÃO - Consequências mais leves
+                dataHTML = `
+                    <div class="data-item">
+                        <div class="data-label">Intenção</div>
+                        <div class="data-value" style="color: #ffcc00;">CURIOSIDADE (Sem ação)</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Endereço IP</div>
+                        <div class="data-value">${deviceInfo.localIP}</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Navegador</div>
+                        <div class="data-value">${deviceInfo.browser}</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">Hora do Acesso</div>
+                        <div class="data-value">${now.toLocaleString('pt-PT')}</div>
+                    </div>
+                `;
+                
+                // Mensagem mais branda para quem clicou NÃO
+                setTimeout(() => {
+                    const terrorMessages = document.querySelector('.terror-messages');
+                    const extraMessage = document.createElement('div');
+                    extraMessage.className = 'message';
+                    extraMessage.innerHTML = `
+                        <div class="message-title" style="color: #ffcc00;">
+                            <i class="fas fa-exclamation-circle"></i> OBSERVAÇÃO
+                        </div>
+                        <div class="message-content">
+                            Por ter escolhido "NÃO", o sistema considera que foi apenas curiosidade. 
+                            No entanto, o acesso foi registado e será monitorizado.
+                        </div>
+                    `;
+                    terrorMessages.appendChild(extraMessage);
+                }, 2000);
+            }
+            
+            collectedData.innerHTML = dataHTML;
+            
+            // Contador fake online
+            setInterval(() => {
+                const countElement = document.getElementById('online-count');
+                let count = parseInt(countElement.textContent);
+                countElement.textContent = count + Math.floor(Math.random() * 3);
+            }, 5000);
+            
+            // Efeitos extras
+            setTimeout(() => {
+                document.body.style.animation = 'terror-pulse 3s infinite';
+            }, 1000);
+        }
+
+        // Mostrar mensagem de NEGAÇÃO (sem revelação)
+        function showDeniedMessage() {
+            const escapeBtn = document.querySelector('.escape-btn');
+            escapeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ENVIANDO PEDIDO...';
+            escapeBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Criar pop-up de "erro" SEM REVELAÇÃO
+                const errorPopup = document.createElement('div');
+                errorPopup.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: rgba(0, 0, 0, 0.95);
+                    border: 3px solid #dc3545;
+                    border-radius: 15px;
+                    padding: 40px;
+                    z-index: 100000;
+                    color: white;
+                    text-align: center;
+                    max-width: 500px;
+                    width: 90%;
+                    box-shadow: 0 0 50px rgba(220, 53, 69, 0.7);
+                `;
+                
+                errorPopup.innerHTML = `
+                    <h2 style="color: #ff4444; margin-bottom: 20px;">
+                        <i class="fas fa-ban"></i> PEDIDO NEGADO
+                    </h2>
+                    <p style="color: #ccc; margin-bottom: 25px; line-height: 1.6;">
+                        O sistema de segurança bloqueou o seu pedido de ajuda.<br>
+                        O processo já está em andamento e não pode ser interrompido.
+                    </p>
+                    <p style="color: #ffcc00; font-weight: bold; margin-bottom: 30px;">
+                        "O sistema não permite apelos. As consequências serão aplicadas."
+                    </p>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 8px; margin-bottom: 25px;">
+                        <i class="fas fa-clock"></i> Processo em andamento: Não pode ser cancelado
+                    </div>
+                    <button onclick="closePopup()" style="
+                        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+                        color: white;
+                        border: none;
+                        padding: 15px 40px;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        margin-top: 10px;
+                    ">
+                        <i class="fas fa-times"></i> FECHAR
+                    </button>
+                `;
+                
+                document.body.appendChild(errorPopup);
+                
+                // Atualizar botão original
+                escapeBtn.innerHTML = '<i class="fas fa-ban"></i> PEDIDO NEGADO - SEM RECURSO';
+                escapeBtn.style.background = 'linear-gradient(135deg, #6c757d 0%, #495057 100%)';
+                escapeBtn.disabled = true;
+            }, 2000);
+        }
+
+        // Fechar pop-up
+        function closePopup() {
+            document.querySelector('div[style*="position: fixed"]')?.remove();
+        }
+
+        // Inicializar contador fake
+        setInterval(() => {
+            const countElement = document.getElementById('online-count');
+            let count = parseInt(countElement.textContent);
+            countElement.textContent = count + Math.floor(Math.random() * 2);
+        }, 3000);
+    </script>
+</body>
+</html>
